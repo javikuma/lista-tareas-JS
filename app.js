@@ -70,10 +70,9 @@ const borrarTarea = (e) => {
   if(e.target.parentElement.classList.contains('borrar')){
     if(confirm('¿Estás seguro de borrar esa tarea?')){
       e.target.parentElement.parentElement.remove();
+      // LocalStorage
+      borrarTareaLocalStorage(e.target.parentElement.parentElement);
     }
-
-    // LocalStorage
-    borrarTareaLocalStorage(e.target.parentElement.parentElement);
   }
 }
 
